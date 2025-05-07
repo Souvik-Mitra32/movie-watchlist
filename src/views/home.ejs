@@ -1,0 +1,97 @@
+<%- include("./partials/sidebar.ejs") %>
+
+    <section class="main-content">
+        <div class="content-about">
+            <div class="page__heading">Welcome to Watchlists</div>
+            <p class="page__subheading">Browse your favorite movies and add them to watchlist</p>
+        </div>
+        <form action="/search-movies" method="GET" class="search-bar">
+            <div class="search__area">
+                <span class="search__icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                        <path
+                            d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352a144 144 0 1 0 0-288 144 144 0 1 0 0 288z" />
+                    </svg></span>
+                <input class="input input--trailing" type="text" name="query" placeholder="Search movies by title"
+                    value="<%= locals.searchedMovie %>" autocomplete="off">
+            </div>
+            <button class="btn">Search</button>
+        </form>
+        <div class="movie-result">
+            <div class="content__heading">
+                <% if (searchedMovie) { %>
+                    Search results for <%= searchedMovie %>
+                        <% } else { %>
+                            Trending Movies Today
+                            <% } %>
+            </div>
+            <div class="movies">
+                <% if (movies) { %>
+                    <% for (const movie of movies) { %>
+                        <div class="movie-card">
+                            <button class="btn--movie open-modal" data-movie-id="<%= movie.id %>"
+                                data-title="<%= movie.title %> (<%= movie.release_date.slice(0, 4) %>)"><svg
+                                    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                                    <path
+                                        d="M256 80c0-17.7-14.3-32-32-32s-32 14.3-32 32l0 144L48 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l144 0 0 144c0 17.7 14.3 32 32 32s32-14.3 32-32l0-144 144 0c17.7 0 32-14.3 32-32s-14.3-32-32-32l-144 0 0-144z" />
+                                </svg>
+                            </button>
+                            <div class="movie__poster"><img src="<%= movie.poster_path %>" alt="movie poster"></div>
+                            <div class="movie__content">
+                                <div class="movie__score">
+                                    <img src="./assets/icons/normal _35 and _80.svg" alt="face smile"
+                                        class="movie__reaction">
+                                    <div>
+                                        <%= movie.vote_average %><span class="movie__total-score">/10</span>
+                                    </div>
+                                </div>
+                                <div class="movie__title">
+                                    <%= movie.title %>
+                                </div>
+                                <div class="movie__release">
+                                    (<%= movie.release_date.slice(0, 4) %>)
+                                </div>
+                            </div>
+                        </div>
+                        <% } %>
+                            <% } else { %>
+                                <p>No movies found</p>
+                                <% } %>
+            </div>
+        </div>
+
+        <%- include("./partials/modal.ejs") %>
+
+    </section>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const modal = document.getElementById("watchlistModal");
+            const closeBtn = document.getElementById("closeModal");
+            const movieTitleSpan = document.getElementById("modalMovieTitle");
+            const watchlistForms = document.querySelectorAll(".watchlistForm");
+
+            document.querySelectorAll(".open-modal").forEach(btn => {
+                btn.addEventListener("click", () => {
+                    const movieId = btn.dataset.movieId;
+                    const title = btn.dataset.title;
+
+                    movieTitleSpan.textContent = title;
+
+                    watchlistForms.forEach(form => {
+                        form.action = `/watchlist/${form.dataset.watchlistId}/add-movie/${movieId}`;
+                    });
+
+                    modal.showModal();
+                });
+            });
+
+            closeBtn.addEventListener("click", () => {
+                modal.close();
+            });
+        });
+    </script>
+
+    </body>
+
+    </html>

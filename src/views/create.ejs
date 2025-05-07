@@ -1,0 +1,23 @@
+<%- include("./partials/sidebar.ejs") %>
+
+    <section class="main-content">
+        <div class="page__heading">Create a new watchlist</div>
+        <form action="/new-watchlist/create" method="POST" class="watchlist-form">
+            <div class="input-field">
+                <label for="" class="input__label">Name</label>
+                <input type="text" name="name" class="input input--solo" placeholder="Enter watchlist name"
+                    autocomplete="off" autofocus="ON">
+            </div>
+            <div class="input-field">
+                <label for="" class="input__label">Description</label>
+                <textarea name="description" id="" class="input input--solo" placeholder="Enter description"></textarea>
+            </div>
+            <button type="submit" class="btn">
+                <span class="btn__text">Create Watchlist</span>
+            </button>
+        </form>
+    </section>
+    </div>
+    </body>
+
+    </html>

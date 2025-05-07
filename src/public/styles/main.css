@@ -1,0 +1,455 @@
+:root {
+    --clr-brand-500: #f33f3f;
+    --clr-black: #000000;
+    --clr-neutral-900: #191919;
+    --clr-neutral-800: #1F1F1F;
+    --clr-neutral-600: #2D2D2D;
+    --clr-neutral-500: #414141;
+    --clr-neutral-400: #6C6C6C;
+    --clr-neutral-300: #9A9A9A;
+    --clr-neutral-100: #E1E1E1;
+    --clr-white: #ffffff;
+
+    --ff-brand: "Archivo", "Segoe UI";
+    --ff-primary: "Lato", "Trebuchet MS";
+
+    --fw-light: 300;
+    --fw-regular: 400;
+    --fw-semiBold: 500;
+    --fw-bold: 700;
+    --fw-extraBold: 800;
+
+    --fs-xxl: 2.375rem;
+    --fs-xl: 2rem;
+    --fs-lg: 1.25rem;
+    --fs-md: 1rem;
+    --fs-sm: .8rem;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--ff-primary);
+    font-size: var(--fs-md);
+    color: var(--clr-neutral-100);
+    background-color: var(--clr-neutral-900);
+}
+
+svg {
+    fill: var(--clr-neutral-100);
+}
+
+ul {
+    list-style: none;
+}
+
+.center {
+    text-align: center;
+}
+
+/* list items */
+.sidebar__link {
+    padding: .7rem;
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+    text-decoration: transparent;
+}
+
+.sidebar__item {
+    border-radius: .25rem;
+}
+
+.sidebar__item:hover {
+    background-color: var(--clr-neutral-600);
+}
+
+.sidebar__item--active {
+    background-color: var(--clr-neutral-600);
+}
+
+.sidebar__icon {
+    flex-shrink: 0;
+    height: 1.25rem;
+    width: 1.25rem;
+    cursor: pointer;
+}
+
+.sidebar__img {
+    flex-shrink: 0;
+    height: 1.25rem;
+    width: 1.25rem;
+}
+
+.sidebar__text {
+    text-wrap: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    color: var(--clr-neutral-100);
+}
+
+.sidebar__subtitle {
+    margin-bottom: 1.25rem;
+    display: block;
+    font-size: var(--fs-lg);
+    color: var(--clr-neutral-300);
+}
+
+/* Buttons */
+.btn {
+    --_btn-padding: .8rem;
+
+    padding: var(--_btn-padding);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: .3rem;
+    text-decoration: transparent;
+    background-color: var(--clr-brand-500);
+    border-radius: .25rem;
+    outline: none;
+    cursor: pointer;
+}
+
+.btn__icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: .7rem;
+    width: .7rem;
+    border: none;
+    cursor: pointer;
+}
+
+
+.btn__icon svg {
+    fill: var(--clr-black);
+}
+
+.btn__text {
+    font-weight: var(--fw-bold);
+    color: var(--clr-black);
+}
+
+/* Movie card */
+.movies {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 1.5rem;
+}
+
+.movie-card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    border-radius: .5rem;
+    overflow: hidden;
+    height: 100%;
+}
+
+.btn--movie {
+    height: 2rem;
+    width: 2rem;
+    padding: .5rem;
+    position: absolute;
+    top: .5rem;
+    left: .5rem;
+    background-color: var(--clr-neutral-900);
+    border: 1px solid var(--clr-neutral-100);
+    border-radius: .5rem;
+    outline: none;
+    cursor: pointer;
+}
+
+.btn-movie svg {
+    fill: var(--clr-neutral-100);
+}
+
+.movie__poster {
+    height: 200px;
+    overflow: hidden;
+}
+
+.movie__poster img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.movie__content {
+    padding: .5rem 1rem 1.5rem 1rem;
+    background-color: var(--clr-neutral-600);
+}
+
+.movie__score {
+    margin-bottom: .5rem;
+    display: flex;
+    align-items: center;
+    gap: .3rem;
+    text-wrap: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.movie__reaction {
+    height: 1.25rem;
+}
+
+.movie__total-score,
+.movie__release {
+    font-size: var(--fs-sm);
+    color: var(--clr-neutral-300);
+}
+
+/* Search bar */
+.search-bar {
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+}
+
+.search__icon {
+    display: block;
+    flex-shrink: 0;
+    height: 1.5rem;
+    width: 1.5rem;
+}
+
+.search__icon svg {
+    fill: var(--clr-neutral-500);
+}
+
+.search__area {
+    padding-left: .5rem;
+    width: 100%;
+    min-width: 15rem;
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+    border: 2px solid var(--clr-neutral-500);
+    border-radius: .5rem;
+}
+
+.input {
+    --_input-padding-block: .8rem;
+    --_input-border-radius: .5rem;
+
+    padding-block: var(--_input-padding-block);
+    width: 100%;
+    font-family: sans-serif;
+    color: var(--clr-neutral-100);
+    background-color: transparent;
+    border: none;
+    border-radius: .5rem;
+    outline: none;
+}
+
+.input--trailing {
+    padding-right: .5rem;
+}
+
+/* Watchlist form */
+.watchlist-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.watchlist-form button {
+    width: 200px;
+}
+
+.input__label {
+    display: block;
+    margin-bottom: .3rem;
+}
+
+.input--solo {
+    padding-inline: .5rem;
+    border: 2px solid var(--clr-neutral-500);
+}
+
+textarea {
+    height: 150px;
+}
+
+/* Movie metrix */
+.movie-metrix {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+.metrix__item {
+    padding: .8rem;
+    width: fit-content;
+    flex-shrink: 0;
+    text-align: center;
+    background-color: var(--clr-neutral-600);
+    border: 1px solid var(--clr-brand-500);
+    border-radius: .5rem;
+}
+
+.metrix__heading {
+    margin-bottom: 1rem;
+    font-size: var(--fs-lg);
+}
+
+.metrix__value {
+    font-size: var(--fs-xl);
+    font-weight: var(--fw-extraBold);
+    color: var(--clr-brand-500);
+}
+
+/* Watchlist modal */
+.watchlist-modal {
+    max-width: 100ch;
+    margin: auto;
+    border: 0;
+}
+
+.modal-content {
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    background-color: var(--clr-neutral-800);
+    color: var(--clr-neutral-100);
+}
+
+.watchlist-modal::backdrop {
+    background-color: var(--clr-neutral-100);
+    opacity: .2;
+}
+
+.heading-and-button {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+.movie-name {
+    font-size: var(--fs-lg);
+}
+
+.watchlist-modal .sidebar__list {
+    display: grid;
+    gap: .5rem;
+}
+
+.watchlist-modal .sidebar__item {
+    width: 250px;
+    background-color: var(--clr-neutral-900);
+}
+
+.watchlist-modal .sidebar__item:hover {
+    background-color: var(--clr-neutral-600);
+}
+
+.watchlist-modal .sidebar__link {
+    width: 100%;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+/* Watchlist about */
+.watchlist-about {
+    max-width: 600px;
+}
+
+.heading-and-buttons {
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.btn-group {
+    display: flex;
+    gap: 1rem;
+}
+
+.btn-group .btn__icon {
+    height: 1.5rem;
+    width: 1.5rem;
+    background: transparent;
+}
+
+.btn-group .btn__icon svg {
+    fill: var(--clr-neutral-300);
+}
+
+/* Mobile Navbar */
+.mobile-navbar {
+    display: flex;
+    gap: .5rem;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--clr-neutral-900);
+}
+
+.name-and-button {
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+}
+
+.brand-name {
+    font-family: var(--ff-brand);
+    font-size: var(--fs-xl);
+    font-weight: var(--fw-extraBold);
+    color: var(--clr-brand-500);
+}
+
+/* Navigation drawer desktop */
+.navigation-drawer {
+    padding: 1rem 1.5rem;
+    width: 320px;
+    display: flex;
+    flex-direction: column;
+    flex-shrink: 0;
+    gap: 1rem;
+}
+
+.divider {
+    height: 1px;
+    background-color: var(--clr-neutral-600);
+}
+
+/* Main section */
+.main-content {
+    padding: 2rem 4rem;
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    background-color: var(--clr-neutral-800);
+}
+
+.content-about {
+    padding: 1rem;
+    background-color: var(--clr-neutral-600);
+    border: 1px solid var(--clr-brand-500);
+    border-radius: .5rem;
+}
+
+.page__heading {
+    margin-bottom: .5rem;
+    font-size: var(--fs-xxl);
+}
+
+.content__heading {
+    margin-bottom: 1.5rem;
+    font-size: var(--fs-xl);
+}
+
+/* Wrapper */
+.wrapper {
+    display: flex;
+}

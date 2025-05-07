@@ -1,0 +1,21 @@
+{
+  "name": "8.7-capstone-project---movie-watchlist",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "nodemon server.js"
+  },
+  "keywords": [],
+  "author": "Souvik Mitra",
+  "license": "ISC",
+  "description": "This is a watchlist web app which is created with Node and Express JS. I used postgres as database and EJS as view engine.",
+  "dependencies": {
+    "axios": "^1.9.0",
+    "dotenv": "^16.5.0",
+    "ejs": "^3.1.10",
+    "express": "^5.1.0",
+    "express-session": "^1.18.1",
+    "pg": "^8.15.6"
+  }
+}

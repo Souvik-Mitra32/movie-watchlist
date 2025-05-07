@@ -1,0 +1,646 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/main.css">
+    <title>Homepage</title>
+</head>
+
+<body>
+    <!-- <nav class="navigation">
+        <ul class="sidebar__list">
+            <li class="sidebar__item sidebar__item--active">
+                <a href="#" class="sidebar__link">
+                    <span class="sidebar__icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
+                            <path
+                                d="M575.8 255.5c0 18-15 32.1-32 32.1l-32 0 .7 160.2c0 2.7-.2 5.4-.5 8.1l0 16.2c0 22.1-17.9 40-40 40l-16 0c-1.1 0-2.2 0-3.3-.1c-1.4 .1-2.8 .1-4.2 .1L416 512l-24 0c-22.1 0-40-17.9-40-40l0-24 0-64c0-17.7-14.3-32-32-32l-64 0c-17.7 0-32 14.3-32 32l0 64 0 24c0 22.1-17.9 40-40 40l-24 0-31.9 0c-1.5 0-3-.1-4.5-.2c-1.2 .1-2.4 .2-3.6 .2l-16 0c-22.1 0-40-17.9-40-40l0-112c0-.9 0-1.9 .1-2.8l0-69.7-32 0c-18 0-32-14-32-32.1c0-9 3-17 10-24L266.4 8c7-7 15-8 22-8s15 2 21 7L564.8 231.5c8 7 12 15 11 24z" />
+                        </svg></span>
+                    <span class="sidebar__text">Home</span>
+                </a>
+            </li>
+            <li class="sidebar__item">
+                <a href="#" class="sidebar__link">
+                    <span class="sidebar__icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                            <path
+                                d="M75 75L41 41C25.9 25.9 0 36.6 0 57.9L0 168c0 13.3 10.7 24 24 24l110.1 0c21.4 0 32.1-25.9 17-41l-30.8-30.8C155 85.5 203 64 256 64c106 0 192 86 192 192s-86 192-192 192c-40.8 0-78.6-12.7-109.7-34.4c-14.5-10.1-34.4-6.6-44.6 7.9s-6.6 34.4 7.9 44.6C151.2 495 201.7 512 256 512c141.4 0 256-114.6 256-256S397.4 0 256 0C185.3 0 121.3 28.7 75 75zm181 53c-13.3 0-24 10.7-24 24l0 104c0 6.4 2.5 12.5 7 17l72 72c9.4 9.4 24.6 9.4 33.9 0s9.4-24.6 0-33.9l-65-65 0-94.1c0-13.3-10.7-24-24-24z" />
+                        </svg></span>
+                    <span class="sidebar__text">History</span>
+                </a>
+            </li>
+        </ul>
+    </nav> -->
+
+    <!-- <section class="watchlist">
+        <span class="sidebar__subtitle">My Lists</span>
+        <ul class="sidebar__list">
+            <li class="sidebar__item">
+                <a href="#" class="sidebar__link"><img src="./assets/icons/watchlist_avatar.svg" alt="avatar"
+                        class="sidebar__img">
+                    <span class="sidebar__text">Movies by Tom Cruise</span>
+                </a>
+            </li>
+            <li class="sidebar__item">
+                <a href="#" class="sidebar__link"><img src="./assets/icons/watchlist_avatar.svg" alt="avatar"
+                        class="sidebar__img">
+                    <span class="sidebar__text">Movies by Tom Cruise</span>
+                </a>
+            </li>
+            <li class="sidebar__item">
+                <a href="#" class="sidebar__link"><span class="sidebar__icon"><svg xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 448 512">
+                            <path
+                                d="M256 80c0-17.7-14.3-32-32-32s-32 14.3-32 32l0 144L48 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l144 0 0 144c0 17.7 14.3 32 32 32s32-14.3 32-32l0-144 144 0c17.7 0 32-14.3 32-32s-14.3-32-32-32l-144 0 0-144z" />
+                        </svg></span>
+                    <span class="sidebar__text">Create Watchlist</span>
+                </a>
+            </li>
+        </ul>
+    </section> -->
+
+    <!-- <a href="#" class="btn">
+        <span class="btn__icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                <path
+                    d="M256 80c0-17.7-14.3-32-32-32s-32 14.3-32 32l0 144L48 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l144 0 0 144c0 17.7 14.3 32 32 32s32-14.3 32-32l0-144 144 0c17.7 0 32-14.3 32-32s-14.3-32-32-32l-144 0 0-144z" />
+            </svg></span>
+        <span class="btn__text">Create Watchlist</span>
+    </a> -->
+
+    <!-- <div class="movie-card">
+        <button class="btn--movie" id="addMovie"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                <path
+                    d="M256 80c0-17.7-14.3-32-32-32s-32 14.3-32 32l0 144L48 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l144 0 0 144c0 17.7 14.3 32 32 32s32-14.3 32-32l0-144 144 0c17.7 0 32-14.3 32-32s-14.3-32-32-32l-144 0 0-144z" />
+            </svg></button>
+        <button class="btn--movie" id="removeMovie" hidden><svg xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 448 512">
+                <path
+                    d="M432 256c0 17.7-14.3 32-32 32L48 288c-17.7 0-32-14.3-32-32s14.3-32 32-32l352 0c17.7 0 32 14.3 32 32z" />
+            </svg></button>
+        <div class="movie__poster"></div>
+        <div class="movie__content">
+            <div class="movie__score">
+                <img src="./assets/icons/normal _35 and _80.svg" alt="face smile" class="movie__reaction">
+                <div>83<span class="movie__total-score">/100</span></div>
+            </div>
+            <div class="movie__title">Top Gun: Maverick</div>
+            <div class="movie__release">(2022)</div>
+        </div>
+    </div> -->
+
+    <!-- <form action="/" method="GET" class="search-bar">
+        <div class="search__area">
+            <span class="search__icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                    <path
+                        d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352a144 144 0 1 0 0-288 144 144 0 1 0 0 288z" />
+                </svg>
+            </span>
+            <input class="input input--trailing" type="text" placeholder="Search movies by title" autocomplete="off">
+        </div>
+        <button class="btn">Search</button>
+    </form> -->
+
+    <!-- <form action="/" method="POST" class="watchlist-form">
+        <div class="input-field">
+            <label for="" class="input__label">Name</label>
+            <input type="text" class="input input--solo" placeholder="Enter watchlist name">
+        </div>
+        <div class="input-field">
+            <label for="" class="input__label">Description</label>
+            <textarea name="description" id="" class="input input--solo" placeholder="Enter description"></textarea>
+        </div>
+        <button type="submit" class="btn">
+            <span class="btn__text">Create Watchlist</span>
+        </button>
+    </form> -->
+
+    <!-- <div class="movie-metrix">
+        <div class="metrix__item">
+            <div class="metrix__heading">ITEMS ON LIST</div>
+            <div class="metrix__value">10</div>
+        </div>
+        <div class="metrix__item">
+            <div class="metrix__heading">ITEMS ON LIST</div>
+            <div class="metrix__value">10</div>
+        </div>
+        <div class="metrix__item">
+            <div class="metrix__heading">ITEMS ON LIST</div>
+            <div class="metrix__value">10</div>
+        </div>
+    </div> -->
+
+    <!-- <div class="watchlist-about">
+        <div class="heading-and-buttons">
+            <div class="page__heading">Movies by Tom Cruise</div>
+            <div class="btn-group">
+                <a href="/" class="btn-item">
+                    <span class="btn__icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                            <path
+                                d="M471.6 21.7c-21.9-21.9-57.3-21.9-79.2 0L362.3 51.7l97.9 97.9 30.1-30.1c21.9-21.9 21.9-57.3 0-79.2L471.6 21.7zm-299.2 220c-6.1 6.1-10.8 13.6-13.5 21.9l-29.6 88.8c-2.9 8.6-.6 18.1 5.8 24.6s15.9 8.7 24.6 5.8l88.8-29.6c8.2-2.7 15.7-7.4 21.9-13.5L437.7 172.3 339.7 74.3 172.4 241.7zM96 64C43 64 0 107 0 160L0 416c0 53 43 96 96 96l256 0c53 0 96-43 96-96l0-96c0-17.7-14.3-32-32-32s-32 14.3-32 32l0 96c0 17.7-14.3 32-32 32L96 448c-17.7 0-32-14.3-32-32l0-256c0-17.7 14.3-32 32-32l96 0c17.7 0 32-14.3 32-32s-14.3-32-32-32L96 64z" />
+                        </svg></span>
+                </a>
+                <form action="/" method="POST" class="btn-item">
+                    <button type="submit" class="btn__icon"><svg xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 448 512">
+                            <path
+                                d="M135.2 17.7L128 32 32 32C14.3 32 0 46.3 0 64S14.3 96 32 96l384 0c17.7 0 32-14.3 32-32s-14.3-32-32-32l-96 0-7.2-14.3C307.4 6.8 296.3 0 284.2 0L163.8 0c-12.1 0-23.2 6.8-28.6 17.7zM416 128L32 128 53.2 467c1.6 25.3 22.6 45 47.9 45l245.8 0c25.3 0 46.3-19.7 47.9-45L416 128z" />
+                        </svg></button>
+                </form>
+            </div>
+        </div>
+        <p class="page__description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam amet placeat,
+            voluptate quia voluptates
+            dignissimos tenetur quis possimus pariatur consequatur quisquam soluta perferendis libero voluptatum.</p>
+    </div> -->
+
+    <!-- <div class="mobile-navbar">
+        <div class="name-and-button">
+            <button class="btn__icon delete"></button>
+            <div class="brand-name">Watchlists</div>
+        </div>
+        <button class="btn__icon delete"></button>
+    </div> -->
+
+    <!-- <div class="navigation-drawer">
+        <div class="brand-name center">Watchlists</div>
+        <form action="/" method="GET" class="search-bar">
+            <div class="search__area">
+                <span class="search__icon"></span>
+                <input class="input input--trailing" type="text" placeholder="Search" autocomplete="off">
+            </div>
+        </form>
+        <nav class="navigation">
+            <ul class="sidebar__list">
+                <li class="sidebar__item sidebar__item--active">
+                    <a href="#" class="sidebar__link">
+                        <span class="sidebar__icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
+                                <path
+                                    d="M575.8 255.5c0 18-15 32.1-32 32.1l-32 0 .7 160.2c0 2.7-.2 5.4-.5 8.1l0 16.2c0 22.1-17.9 40-40 40l-16 0c-1.1 0-2.2 0-3.3-.1c-1.4 .1-2.8 .1-4.2 .1L416 512l-24 0c-22.1 0-40-17.9-40-40l0-24 0-64c0-17.7-14.3-32-32-32l-64 0c-17.7 0-32 14.3-32 32l0 64 0 24c0 22.1-17.9 40-40 40l-24 0-31.9 0c-1.5 0-3-.1-4.5-.2c-1.2 .1-2.4 .2-3.6 .2l-16 0c-22.1 0-40-17.9-40-40l0-112c0-.9 0-1.9 .1-2.8l0-69.7-32 0c-18 0-32-14-32-32.1c0-9 3-17 10-24L266.4 8c7-7 15-8 22-8s15 2 21 7L564.8 231.5c8 7 12 15 11 24z" />
+                            </svg></span>
+                        <span class="sidebar__text">Home</span>
+                    </a>
+                </li>
+                <li class="sidebar__item">
+                    <a href="#" class="sidebar__link">
+                        <span class="sidebar__icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                                <path
+                                    d="M75 75L41 41C25.9 25.9 0 36.6 0 57.9L0 168c0 13.3 10.7 24 24 24l110.1 0c21.4 0 32.1-25.9 17-41l-30.8-30.8C155 85.5 203 64 256 64c106 0 192 86 192 192s-86 192-192 192c-40.8 0-78.6-12.7-109.7-34.4c-14.5-10.1-34.4-6.6-44.6 7.9s-6.6 34.4 7.9 44.6C151.2 495 201.7 512 256 512c141.4 0 256-114.6 256-256S397.4 0 256 0C185.3 0 121.3 28.7 75 75zm181 53c-13.3 0-24 10.7-24 24l0 104c0 6.4 2.5 12.5 7 17l72 72c9.4 9.4 24.6 9.4 33.9 0s9.4-24.6 0-33.9l-65-65 0-94.1c0-13.3-10.7-24-24-24z" />
+                            </svg></span>
+                        <span class="sidebar__text">History</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+        <a href="#" class="btn">
+            <span class="btn__icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                    <path
+                        d="M256 80c0-17.7-14.3-32-32-32s-32 14.3-32 32l0 144L48 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l144 0 0 144c0 17.7 14.3 32 32 32s32-14.3 32-32l0-144 144 0c17.7 0 32-14.3 32-32s-14.3-32-32-32l-144 0 0-144z" />
+                </svg></span>
+            <span class="btn__text">Create Watchlist</span>
+        </a>
+        <div class="divider"></div>
+        <section class="watchlist">
+            <span class="sidebar__subtitle">My Lists</span>
+            <ul class="sidebar__list">
+                <li class="sidebar__item">
+                    <a href="#" class="sidebar__link"><img src="./assets/icons/watchlist_avatar.svg" alt="avatar"
+                            class="sidebar__img">
+                        <span class="sidebar__text">Movies by Tom Cruise</span>
+                    </a>
+                </li>
+                <li class="sidebar__item">
+                    <a href="#" class="sidebar__link"><img src="./assets/icons/watchlist_avatar.svg" alt="avatar"
+                            class="sidebar__img">
+                        <span class="sidebar__text">Movies by Tom Cruise</span>
+                    </a>
+                </li>
+            </ul>
+        </section>
+    </div> -->
+
+    <!-- <div class="wrapper">
+        <section class="navigation-drawer">
+            <div class="brand-name center">Watchlists</div>
+            <form action="/" method="GET" class="search-bar">
+                <div class="search__area">
+                    <span class="search__icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                            <path
+                                d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352a144 144 0 1 0 0-288 144 144 0 1 0 0 288z" />
+                        </svg></span>
+                    <input class="input input--trailing" type="text" placeholder="Search" autocomplete="off">
+                </div>
+            </form>
+            <nav class="navigation">
+                <ul class="sidebar__list">
+                    <li class="sidebar__item sidebar__item--active">
+                        <a href="#" class="sidebar__link">
+                            <span class="sidebar__icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
+                                    <path
+                                        d="M575.8 255.5c0 18-15 32.1-32 32.1l-32 0 .7 160.2c0 2.7-.2 5.4-.5 8.1l0 16.2c0 22.1-17.9 40-40 40l-16 0c-1.1 0-2.2 0-3.3-.1c-1.4 .1-2.8 .1-4.2 .1L416 512l-24 0c-22.1 0-40-17.9-40-40l0-24 0-64c0-17.7-14.3-32-32-32l-64 0c-17.7 0-32 14.3-32 32l0 64 0 24c0 22.1-17.9 40-40 40l-24 0-31.9 0c-1.5 0-3-.1-4.5-.2c-1.2 .1-2.4 .2-3.6 .2l-16 0c-22.1 0-40-17.9-40-40l0-112c0-.9 0-1.9 .1-2.8l0-69.7-32 0c-18 0-32-14-32-32.1c0-9 3-17 10-24L266.4 8c7-7 15-8 22-8s15 2 21 7L564.8 231.5c8 7 12 15 11 24z" />
+                                </svg></span>
+                            <span class="sidebar__text">Home</span>
+                        </a>
+                    </li>
+                    <li class="sidebar__item">
+                        <a href="#" class="sidebar__link">
+                            <span class="sidebar__icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                                    <path
+                                        d="M75 75L41 41C25.9 25.9 0 36.6 0 57.9L0 168c0 13.3 10.7 24 24 24l110.1 0c21.4 0 32.1-25.9 17-41l-30.8-30.8C155 85.5 203 64 256 64c106 0 192 86 192 192s-86 192-192 192c-40.8 0-78.6-12.7-109.7-34.4c-14.5-10.1-34.4-6.6-44.6 7.9s-6.6 34.4 7.9 44.6C151.2 495 201.7 512 256 512c141.4 0 256-114.6 256-256S397.4 0 256 0C185.3 0 121.3 28.7 75 75zm181 53c-13.3 0-24 10.7-24 24l0 104c0 6.4 2.5 12.5 7 17l72 72c9.4 9.4 24.6 9.4 33.9 0s9.4-24.6 0-33.9l-65-65 0-94.1c0-13.3-10.7-24-24-24z" />
+                                </svg></span>
+                            <span class="sidebar__text">History</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+            <a href="/new-watchlist" class="btn">
+                <span class="btn__icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                        <path
+                            d="M256 80c0-17.7-14.3-32-32-32s-32 14.3-32 32l0 144L48 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l144 0 0 144c0 17.7 14.3 32 32 32s32-14.3 32-32l0-144 144 0c17.7 0 32-14.3 32-32s-14.3-32-32-32l-144 0 0-144z" />
+                    </svg></span>
+                <span class="btn__text">Create Watchlist</span>
+            </a>
+            <div class="divider"></div>
+            <section class="watchlist">
+                <span class="sidebar__subtitle">My Lists</span>
+                <ul class="sidebar__list">
+                    <li class="sidebar__item">
+                        <a href="/watchlist/:watchlistId" class="sidebar__link"><img
+                                src="./assets/icons/watchlist_avatar.svg" alt="avatar" class="sidebar__img">
+                            <span class="sidebar__text">Movies by Tom Cruise</span>
+                        </a>
+                    </li>
+                </ul>
+            </section>
+        </section>
+
+        <section class="main-content">
+            <div class="content-about">
+                <div class="page__heading">Welcome to Watchlists</div>
+                <p class="page__subheading">Browse your favorite movies and add them to watchlist</p>
+            </div>
+            <form action="/search-movies" method="GET" class="search-bar">
+                <div class="search__area">
+                    <span class="search__icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                            <path
+                                d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352a144 144 0 1 0 0-288 144 144 0 1 0 0 288z" />
+                        </svg></span>
+                    <input class="input input--trailing" type="text" placeholder="Search movies by title"
+                        autocomplete="off">
+                </div>
+                <button class="btn">Search</button>
+            </form>
+            <div class="movie-result">
+                <div class="content__heading">Trending movies today</div>
+                <div class="movies">
+                    <div class="movie-card">
+                        <button class="btn--movie" id="addMovie"><svg xmlns="http://www.w3.org/2000/svg"
+                                viewBox="0 0 448 512">
+                                <path
+                                    d="M256 80c0-17.7-14.3-32-32-32s-32 14.3-32 32l0 144L48 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l144 0 0 144c0 17.7 14.3 32 32 32s32-14.3 32-32l0-144 144 0c17.7 0 32-14.3 32-32s-14.3-32-32-32l-144 0 0-144z" />
+                            </svg></button>
+                        <form action="watchlist/:watchlistId/movie/:movieId/remove" method="POST" hidden>
+                            <button class="btn--movie" id="removeMovie"><svg xmlns="http://www.w3.org/2000/svg"
+                                    viewBox="0 0 448 512">
+                                    <path
+                                        d="M432 256c0 17.7-14.3 32-32 32L48 288c-17.7 0-32-14.3-32-32s14.3-32 32-32l352 0c17.7 0 32 14.3 32 32z" />
+                                </svg></button>
+                        </form>
+                        <div class="movie__poster"></div>
+                        <div class="movie__content">
+                            <div class="movie__score">
+                                <img src="./assets/icons/normal _35 and _80.svg" alt="face smile"
+                                    class="movie__reaction">
+                                <div>83<span class="movie__total-score">/100</span></div>
+                            </div>
+                            <div class="movie__title">Top Gun: Maverick</div>
+                            <div class="movie__release">(2022)</div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </section>
+
+        <dialog class="watchlist-modal" id="watchlistModal">
+            <div class="modal-content">
+                <div class="heading-and-button">
+                    <div class="modal__heading">Add movie: <span class="movie-name">Top Gun: Maverick (2022)</span>
+                    </div>
+                    <div class="sidebar__icon" id="close-modal"><svg xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 384 512">
+                            <path
+                                d="M342.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192 210.7 86.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L146.7 256 41.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192 301.3 297.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.3 256 342.6 150.6z" />
+                        </svg></div>
+                </div>
+                <span>To watchlist:</span>
+                <ul class="sidebar__list">
+                    <li class="sidebar__item">
+                        <a href="/watchlist/:watchlistId/add-movie/:movieId" class="sidebar__link"><img
+                                src="./assets/icons/watchlist_avatar.svg" alt="avatar" class="sidebar__img">
+                            <span class="sidebar__text">Movies by Tom Cruise</span>
+                        </a>
+                    </li>
+                    <div class="sidebar__item">
+                        <a href="/new-watchlist" class="btn">
+                            <span class="btn__icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                                    <path
+                                        d="M256 80c0-17.7-14.3-32-32-32s-32 14.3-32 32l0 144L48 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l144 0 0 144c0 17.7 14.3 32 32 32s32-14.3 32-32l0-144 144 0c17.7 0 32-14.3 32-32s-14.3-32-32-32l-144 0 0-144z" />
+                                </svg></span>
+                            <span class="btn__text">Create Watchlist</span>
+                        </a>
+                    </div>
+                </ul>
+            </div>
+        </dialog>
+    </div> -->
+
+    <!-- <div class="wrapper">
+        <section class="navigation-drawer">
+            <div class="brand-name center">Watchlists</div>
+            <form action="/" method="GET" class="search-bar">
+                <div class="search__area">
+                    <span class="search__icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                            <path
+                                d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352a144 144 0 1 0 0-288 144 144 0 1 0 0 288z" />
+                        </svg>
+                    </span>
+                    <input class="input input--trailing" type="text" placeholder="Search movies by title"
+                        autocomplete="off">
+                </div>
+            </form>
+            <nav class="navigation">
+                <ul class="sidebar__list">
+                    <li class="sidebar__item">
+                        <a href="/" class="sidebar__link">
+                            <span class="sidebar__icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
+                                    <path
+                                        d="M575.8 255.5c0 18-15 32.1-32 32.1l-32 0 .7 160.2c0 2.7-.2 5.4-.5 8.1l0 16.2c0 22.1-17.9 40-40 40l-16 0c-1.1 0-2.2 0-3.3-.1c-1.4 .1-2.8 .1-4.2 .1L416 512l-24 0c-22.1 0-40-17.9-40-40l0-24 0-64c0-17.7-14.3-32-32-32l-64 0c-17.7 0-32 14.3-32 32l0 64 0 24c0 22.1-17.9 40-40 40l-24 0-31.9 0c-1.5 0-3-.1-4.5-.2c-1.2 .1-2.4 .2-3.6 .2l-16 0c-22.1 0-40-17.9-40-40l0-112c0-.9 0-1.9 .1-2.8l0-69.7-32 0c-18 0-32-14-32-32.1c0-9 3-17 10-24L266.4 8c7-7 15-8 22-8s15 2 21 7L564.8 231.5c8 7 12 15 11 24z" />
+                                </svg></span>
+                            <span class="sidebar__text">Home</span>
+                        </a>
+                    </li>
+                    <li class="sidebar__item">
+                        <a href="#" class="sidebar__link">
+                            <span class="sidebar__icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                                    <path
+                                        d="M75 75L41 41C25.9 25.9 0 36.6 0 57.9L0 168c0 13.3 10.7 24 24 24l110.1 0c21.4 0 32.1-25.9 17-41l-30.8-30.8C155 85.5 203 64 256 64c106 0 192 86 192 192s-86 192-192 192c-40.8 0-78.6-12.7-109.7-34.4c-14.5-10.1-34.4-6.6-44.6 7.9s-6.6 34.4 7.9 44.6C151.2 495 201.7 512 256 512c141.4 0 256-114.6 256-256S397.4 0 256 0C185.3 0 121.3 28.7 75 75zm181 53c-13.3 0-24 10.7-24 24l0 104c0 6.4 2.5 12.5 7 17l72 72c9.4 9.4 24.6 9.4 33.9 0s9.4-24.6 0-33.9l-65-65 0-94.1c0-13.3-10.7-24-24-24z" />
+                                </svg></span>
+                            <span class="sidebar__text">History</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+            <a href="/new-watchlist" class="btn">
+                <span class="btn__icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                        <path
+                            d="M256 80c0-17.7-14.3-32-32-32s-32 14.3-32 32l0 144L48 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l144 0 0 144c0 17.7 14.3 32 32 32s32-14.3 32-32l0-144 144 0c17.7 0 32-14.3 32-32s-14.3-32-32-32l-144 0 0-144z" />
+                    </svg></span>
+                <span class="btn__text">Create Watchlist</span>
+            </a>
+            <div class="divider"></div>
+            <section class="watchlist">
+                <span class="sidebar__subtitle">My Lists</span>
+                <ul class="sidebar__list">
+                    <li class="sidebar__item">
+                        <a href="/watchlist/:watchlistId" class="sidebar__link"><img
+                                src="./assets/icons/watchlist_avatar.svg" alt="avatar" class="sidebar__img">
+                            <span class="sidebar__text">Movies by Tom Cruise</span>
+                        </a>
+                    </li>
+                </ul>
+            </section>
+        </section>
+        <section class="main-content">
+            <div class="page__heading">Create a new watchlist</div>
+            <form action="/new-watchlist/create" method="POST" class="watchlist-form">
+                <div class="input-field">
+                    <label for="" class="input__label">Name</label>
+                    <input type="text" class="input input--solo" placeholder="Enter watchlist name">
+                </div>
+                <div class="input-field">
+                    <label for="" class="input__label">Description</label>
+                    <textarea name="description" id="" class="input input--solo"
+                        placeholder="Enter description"></textarea>
+                </div>
+                <button type="submit" class="btn">
+                    <span class="btn__text">Create Watchlist</span>
+                </button>
+            </form>
+        </section>
+    </div> -->
+
+    <!-- <div class="wrapper">
+        <section class="navigation-drawer">
+            <div class="brand-name center">Watchlists</div>
+            <form action="/" method="GET" class="search-bar">
+                <div class="search__area">
+                    <span class="search__icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                            <path
+                                d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352a144 144 0 1 0 0-288 144 144 0 1 0 0 288z" />
+                        </svg>
+                    </span>
+                    <input class="input input--trailing" type="text" placeholder="Search movies by title"
+                        autocomplete="off">
+                </div>
+            </form>
+            <nav class="navigation">
+                <ul class="sidebar__list">
+                    <li class="sidebar__item">
+                        <a href="/" class="sidebar__link">
+                            <span class="sidebar__icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
+                                    <path
+                                        d="M575.8 255.5c0 18-15 32.1-32 32.1l-32 0 .7 160.2c0 2.7-.2 5.4-.5 8.1l0 16.2c0 22.1-17.9 40-40 40l-16 0c-1.1 0-2.2 0-3.3-.1c-1.4 .1-2.8 .1-4.2 .1L416 512l-24 0c-22.1 0-40-17.9-40-40l0-24 0-64c0-17.7-14.3-32-32-32l-64 0c-17.7 0-32 14.3-32 32l0 64 0 24c0 22.1-17.9 40-40 40l-24 0-31.9 0c-1.5 0-3-.1-4.5-.2c-1.2 .1-2.4 .2-3.6 .2l-16 0c-22.1 0-40-17.9-40-40l0-112c0-.9 0-1.9 .1-2.8l0-69.7-32 0c-18 0-32-14-32-32.1c0-9 3-17 10-24L266.4 8c7-7 15-8 22-8s15 2 21 7L564.8 231.5c8 7 12 15 11 24z" />
+                                </svg></span>
+                            <span class="sidebar__text">Home</span>
+                        </a>
+                    </li>
+                    <li class="sidebar__item">
+                        <a href="#" class="sidebar__link">
+                            <span class="sidebar__icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                                    <path
+                                        d="M75 75L41 41C25.9 25.9 0 36.6 0 57.9L0 168c0 13.3 10.7 24 24 24l110.1 0c21.4 0 32.1-25.9 17-41l-30.8-30.8C155 85.5 203 64 256 64c106 0 192 86 192 192s-86 192-192 192c-40.8 0-78.6-12.7-109.7-34.4c-14.5-10.1-34.4-6.6-44.6 7.9s-6.6 34.4 7.9 44.6C151.2 495 201.7 512 256 512c141.4 0 256-114.6 256-256S397.4 0 256 0C185.3 0 121.3 28.7 75 75zm181 53c-13.3 0-24 10.7-24 24l0 104c0 6.4 2.5 12.5 7 17l72 72c9.4 9.4 24.6 9.4 33.9 0s9.4-24.6 0-33.9l-65-65 0-94.1c0-13.3-10.7-24-24-24z" />
+                                </svg></span>
+                            <span class="sidebar__text">History</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+            <a href="/new-watchlist" class="btn">
+                <span class="btn__icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                        <path
+                            d="M256 80c0-17.7-14.3-32-32-32s-32 14.3-32 32l0 144L48 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l144 0 0 144c0 17.7 14.3 32 32 32s32-14.3 32-32l0-144 144 0c17.7 0 32-14.3 32-32s-14.3-32-32-32l-144 0 0-144z" />
+                    </svg></span>
+                <span class="btn__text">Create Watchlist</span>
+            </a>
+            <div class="divider"></div>
+            <section class="watchlist">
+                <span class="sidebar__subtitle">My Lists</span>
+                <ul class="sidebar__list">
+                    <li class="sidebar__item">
+                        <a href="/watchlist/:watchlistId" class="sidebar__link"><img
+                                src="./assets/icons/watchlist_avatar.svg" alt="avatar" class="sidebar__img">
+                            <span class="sidebar__text">Movies by Tom Cruise</span>
+                        </a>
+                    </li>
+                </ul>
+            </section>
+        </section>
+        <section class="main-content">
+            <div class="page__heading">Edit watchlist</div>
+            <form action="/watchlist/:watchlistId/confirm-edit" method="POST" class="watchlist-form">
+                <div class="input-field">
+                    <label for="" class="input__label">Name</label>
+                    <input type="text" class="input input--solo" placeholder="Enter watchlist name">
+                </div>
+                <div class="input-field">
+                    <label for="" class="input__label">Description</label>
+                    <textarea name="description" id="" class="input input--solo"
+                        placeholder="Enter description"></textarea>
+                </div>
+                <button type="submit" class="btn">
+                    <span class="btn__text">Save</span>
+                </button>
+            </form>
+        </section>
+    </div> -->
+
+    <!-- <div class="wrapper">
+        <section class="navigation-drawer">
+            <div class="brand-name center">Watchlists</div>
+            <form action="/" method="GET" class="search-bar">
+                <div class="search__area">
+                    <span class="search__icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                            <path
+                                d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352a144 144 0 1 0 0-288 144 144 0 1 0 0 288z" />
+                        </svg>
+                    </span>
+                    <input class="input input--trailing" type="text" placeholder="Search movies by title"
+                        autocomplete="off">
+                </div>
+            </form>
+            <nav class="navigation">
+                <ul class="sidebar__list">
+                    <li class="sidebar__item">
+                        <a href="/" class="sidebar__link">
+                            <span class="sidebar__icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
+                                    <path
+                                        d="M575.8 255.5c0 18-15 32.1-32 32.1l-32 0 .7 160.2c0 2.7-.2 5.4-.5 8.1l0 16.2c0 22.1-17.9 40-40 40l-16 0c-1.1 0-2.2 0-3.3-.1c-1.4 .1-2.8 .1-4.2 .1L416 512l-24 0c-22.1 0-40-17.9-40-40l0-24 0-64c0-17.7-14.3-32-32-32l-64 0c-17.7 0-32 14.3-32 32l0 64 0 24c0 22.1-17.9 40-40 40l-24 0-31.9 0c-1.5 0-3-.1-4.5-.2c-1.2 .1-2.4 .2-3.6 .2l-16 0c-22.1 0-40-17.9-40-40l0-112c0-.9 0-1.9 .1-2.8l0-69.7-32 0c-18 0-32-14-32-32.1c0-9 3-17 10-24L266.4 8c7-7 15-8 22-8s15 2 21 7L564.8 231.5c8 7 12 15 11 24z" />
+                                </svg></span>
+                            <span class="sidebar__text">Home</span>
+                        </a>
+                    </li>
+                    <li class="sidebar__item">
+                        <a href="#" class="sidebar__link">
+                            <span class="sidebar__icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                                    <path
+                                        d="M75 75L41 41C25.9 25.9 0 36.6 0 57.9L0 168c0 13.3 10.7 24 24 24l110.1 0c21.4 0 32.1-25.9 17-41l-30.8-30.8C155 85.5 203 64 256 64c106 0 192 86 192 192s-86 192-192 192c-40.8 0-78.6-12.7-109.7-34.4c-14.5-10.1-34.4-6.6-44.6 7.9s-6.6 34.4 7.9 44.6C151.2 495 201.7 512 256 512c141.4 0 256-114.6 256-256S397.4 0 256 0C185.3 0 121.3 28.7 75 75zm181 53c-13.3 0-24 10.7-24 24l0 104c0 6.4 2.5 12.5 7 17l72 72c9.4 9.4 24.6 9.4 33.9 0s9.4-24.6 0-33.9l-65-65 0-94.1c0-13.3-10.7-24-24-24z" />
+                                </svg></span>
+                            <span class="sidebar__text">History</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+            <a href="/new-watchlist" class="btn">
+                <span class="btn__icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                        <path
+                            d="M256 80c0-17.7-14.3-32-32-32s-32 14.3-32 32l0 144L48 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l144 0 0 144c0 17.7 14.3 32 32 32s32-14.3 32-32l0-144 144 0c17.7 0 32-14.3 32-32s-14.3-32-32-32l-144 0 0-144z" />
+                    </svg></span>
+                <span class="btn__text">Create Watchlist</span>
+            </a>
+            <div class="divider"></div>
+            <section class="watchlist">
+                <span class="sidebar__subtitle">My Lists</span>
+                <ul class="sidebar__list">
+                    <li class="sidebar__item sidebar__item--active">
+                        <a href="/watchlist/:watchlistId" class="sidebar__link"><img
+                                src="./assets/icons/watchlist_avatar.svg" alt="avatar" class="sidebar__img">
+                            <span class="sidebar__text">Movies by Tom Cruise</span>
+                        </a>
+                    </li>
+                </ul>
+            </section>
+        </section>
+        <section class="main-content">
+            <div class="watchlist-about">
+                <div class="heading-and-buttons">
+                    <div class="page__heading">Movies by Tom Cruise</div>
+                    <div class="btn-group">
+                        <a href="/watchlist/:watchlistId/edit" class="btn-item">
+                            <span class="btn__icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                                    <path
+                                        d="M471.6 21.7c-21.9-21.9-57.3-21.9-79.2 0L362.3 51.7l97.9 97.9 30.1-30.1c21.9-21.9 21.9-57.3 0-79.2L471.6 21.7zm-299.2 220c-6.1 6.1-10.8 13.6-13.5 21.9l-29.6 88.8c-2.9 8.6-.6 18.1 5.8 24.6s15.9 8.7 24.6 5.8l88.8-29.6c8.2-2.7 15.7-7.4 21.9-13.5L437.7 172.3 339.7 74.3 172.4 241.7zM96 64C43 64 0 107 0 160L0 416c0 53 43 96 96 96l256 0c53 0 96-43 96-96l0-96c0-17.7-14.3-32-32-32s-32 14.3-32 32l0 96c0 17.7-14.3 32-32 32L96 448c-17.7 0-32-14.3-32-32l0-256c0-17.7 14.3-32 32-32l96 0c17.7 0 32-14.3 32-32s-14.3-32-32-32L96 64z" />
+                                </svg></span>
+                        </a>
+                        <form action="/watchlist/:watchlistId/delete" method="POST" class="btn-item">
+                            <button type="submit" class="btn__icon"><svg xmlns="http://www.w3.org/2000/svg"
+                                    viewBox="0 0 448 512">
+                                    <path
+                                        d="M135.2 17.7L128 32 32 32C14.3 32 0 46.3 0 64S14.3 96 32 96l384 0c17.7 0 32-14.3 32-32s-14.3-32-32-32l-96 0-7.2-14.3C307.4 6.8 296.3 0 284.2 0L163.8 0c-12.1 0-23.2 6.8-28.6 17.7zM416 128L32 128 53.2 467c1.6 25.3 22.6 45 47.9 45l245.8 0c25.3 0 46.3-19.7 47.9-45L416 128z" />
+                                </svg></button>
+                        </form>
+                    </div>
+                </div>
+                <p class="page__description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam amet placeat,
+                    voluptate quia voluptates
+                    dignissimos tenetur quis possimus pariatur consequatur quisquam soluta perferendis libero
+                    voluptatum.</p>
+            </div>
+            <div class="movie-metrix">
+                <div class="metrix__item">
+                    <div class="metrix__heading">ITEMS ON LIST</div>
+                    <div class="metrix__value">10</div>
+                </div>
+                <div class="metrix__item">
+                    <div class="metrix__heading">ITEMS ON LIST</div>
+                    <div class="metrix__value">10</div>
+                </div>
+                <div class="metrix__item">
+                    <div class="metrix__heading">ITEMS ON LIST</div>
+                    <div class="metrix__value">10</div>
+                </div>
+            </div>
+            <div class="movie-result">
+                <div class="content__heading">Movies</div>
+                <div class="movies">
+                    <div class="movie-card">
+                        <form action="/watchlist/:watchlistId/movie/:movieId/remove">
+                            <button class="btn--movie" id="removeMovie"><svg xmlns="http://www.w3.org/2000/svg"
+                                    viewBox="0 0 448 512">
+                                    <path
+                                        d="M432 256c0 17.7-14.3 32-32 32L48 288c-17.7 0-32-14.3-32-32s14.3-32 32-32l352 0c17.7 0 32 14.3 32 32z" />
+                                </svg></button>
+                        </form>
+                        <div class="movie__poster"></div>
+                        <div class="movie__content">
+                            <div class="movie__score">
+                                <img src="./assets/icons/normal _35 and _80.svg" alt="face smile"
+                                    class="movie__reaction">
+                                <div>83<span class="movie__total-score">/100</span></div>
+                            </div>
+                            <div class="movie__title">Top Gun: Maverick</div>
+                            <div class="movie__release">(2022)</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div> -->
+
+    <script>
+        watchlistModal = document.getElementById("watchlistModal");
+        openModal = document.getElementById("addMovie");
+        closeModal = document.getElementById("close-modal");
+
+        openModal.addEventListener("click", () => {
+            watchlistModal.showModal();
+        })
+
+        closeModal.addEventListener("click", () => {
+            watchlistModal.close();
+        })
+
+    </script>
+</body>
+
+</html>

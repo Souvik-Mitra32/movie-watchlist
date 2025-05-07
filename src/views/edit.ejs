@@ -1,0 +1,27 @@
+<%- include("./partials/sidebar.ejs") %>
+
+    <section class="main-content">
+        <div class="page__heading">Edit watchlist</div>
+        <form action="/watchlist/<%= watchlist.id %>/confirm-edit" method="POST" class="watchlist-form">
+            <div class="input-field">
+                <label for="" class="input__label">Name</label>
+                <input type="text" name="updatedName" class="input input--solo" placeholder="Enter watchlist name"
+                    value="<%= watchlist.name %>" autocomplete="off">
+            </div>
+            <div class="input-field">
+                <label for="" class="input__label">Description</label>
+                <textarea name="updatedDescription" id="" class="input input--solo"
+                    placeholder="Enter watchlist description"><%= watchlist.description %></textarea>
+            </div>
+            <button type="submit" class="btn">
+                <span class="btn__text">Save</span>
+            </button>
+            <% if (locals.error) { %>
+                <p>error</p>
+                <% } %>
+        </form>
+    </section>
+    </div>
+    </body>
+
+    </html>

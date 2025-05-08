@@ -21,7 +21,7 @@ The project required the following skills
 2. Pull it into your local system
 3. Install neccessary node modules (i.e. npm i)
 4. Create a table in your database named "watchlist" with the columns - id, name, movie_ids, description
-5. Go to the file, root directory > src > models > watchlist.js (type - 'src/models/watchlist.js') and modify the 2nd line by requiring your own database.
+5. Go to the file, root directory > src > config > db.js (type - 'src/config/db.js') and setup your own database.
 6. Once done, you can run the server with the command 'npm start'
 7. The home path should be 'http://localhost:3000'
 
